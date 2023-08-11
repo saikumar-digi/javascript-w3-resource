@@ -1,6 +1,6 @@
 today=new Date();
 const daysLeft=new Date(today.getFullYear(), 11, 25);
-;
+
 if (today.getMonth()==11 && today.getDate()>25) 
 {
 daysLeft.setFullYear(daysLeft.getFullYear()+1); 
