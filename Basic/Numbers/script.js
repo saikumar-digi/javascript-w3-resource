@@ -36,12 +36,12 @@ console.log(difference(32))
 console.log(difference(11))
 
 //or
-let n  = 25
-if (n<=13) {
-   13 - n
+let n = 25
+if (n <= 13) {
+  13 - n
 }
-else{
- ( n-13 ) *2
+else {
+  (n - 13) * 2
 }
 
 
@@ -65,8 +65,8 @@ function test50(x, y) {
 }
 console.log(test50(50, 50))
 console.log(test50(20, 50))
-console.log(test50(20, 20))
-console.log(test50(20, 30))
+console.log(test50(20, 20))   
+console.log(test50(20, 30)) 
 
 
 //Check whether a given integer is within 20 of 100 or 400
