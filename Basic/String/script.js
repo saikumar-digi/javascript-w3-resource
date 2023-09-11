@@ -21,7 +21,12 @@ console.log(removeCharacter("saikumar",0));
 console.log(removeCharacter("abuhurera",3));
 console.log(removeCharacter("viveknanda",5));
 
+
+
 //Create a new string from a given string with the first character of the given string added at the front and back
+
+// b.charAt()+s+b.charAt()
+// 'SSaikumarS'
 function frontBack(str)
 {
   first = str.substring(0,1);
@@ -31,7 +36,7 @@ console.log(frontBack('a'));
 console.log(frontBack('ab'));
 console.log(frontBack('abc'));
 
-////26 Create a new string from a given string taking the last 3 characters and added at both the front and back
+//26 Create a new string from a given string taking the last 3 characters and added at both the front and back
 function test3(str)
 {
  if (str.length>=3)
@@ -47,6 +52,16 @@ function test3(str)
 console.log(test3("xyz"));
 console.log(test3("xy"));
 console.log(test3("mnop"));
+
+//or
+
+let a= "saikumar"
+
+let c= a.substring(a.length-3)
+
+let d = c+a+c
+// 'marsaikumarmar'
+
 
 // 27 Check whether a string starts with 'Java' and false otherwise
 function test4(str)
@@ -80,16 +95,25 @@ function checkScript(str)
   let result_str = str;
     
   if (str.substring(10, 4) == 'Script') 
-    {
-    
-    result_str = str.substring(0, 4) + str.substring(10,str.length);
-      
+    {  
+    result_str = str.substring(0, 4) + str.substring(10,str.length); 
   }
   return result_str;
 }
 
 console.log(checkScript("JavaScript"));
 console.log(checkScript("CoffeeScript"));
+
+//or
+str = "javaScriptboss"
+let final = str;
+    
+  if (str.substring(10, 4) == 'Script') 
+    {
+    final = str.substring(0, 4) + str.substring(10,str.length);  
+  }
+   final;
+
 
 //37 Create new string with first 3 characters are in lower case
 //Write a JavaScript program to produce a new string that has the first 3 characters in lower case from a given string. If the string length is less than 3 convert all the characters to upper case.  
@@ -115,34 +139,13 @@ console.log(reverseString("saikumar"));
 console.log(reverseString("aaaa"));
 console.log(reverseString("ashishMaity"));
 
-//49 Write a JavaScript program to replace every character in a given string with the character following it in the alphabet.
-function replaceString(text) {
-    let a = text.split('');
-    for (let i = 0; i < a.length; i++) {
-        switch(a[i]) {
-          case ' ':
-            break;
-          case 'z':
-            a[i] = 'a';
-            break;
-          case 'Z':     
-            a[i] = 'A';
-            break;
-          default:
-            a[i] = String.fromCharCode(1 + a[i].charCodeAt(0));
-        }
-
-        // Upper-case vowels
-        switch(a[i]) {
-          case 'a': case 'e': case 'i': case 'o': case 'u':
-            a[i] = a[i].toUpperCase();
-        }
-    }
-    return a.join('');
+// or
+let a1 = "saiumar"
+let  b = "";
+for (let i = a1.length; i>=0; i--) {
+    b = a1[i]
+    console.log(b)
 }
-console.log(replaceString("saikumar"));
-console.log(replaceString("abu"));
-console.log(replaceString("VivekAnanDa"));
 
 //50  Write a JavaScript program to capitalize the first letter of each word in a given string.
 function capLetter(str) 
@@ -157,3 +160,16 @@ function capLetter(str)
 }
 
 console.log(capLetter("Hii good morning team happy to have you Guys."));
+
+//Write a JavaScript program to create a new string from a given string by changing the position of the first and last characters. The string length must be broader than or equal to 1.
+
+function b(str1) 
+  {
+  if (str1.length <= 1)
+  {
+    return str1;
+  }
+  a = str1.substring(1, str1.length - 1);
+  return (str1.charAt(str1.length - 1)) + a + str1.charAt(0);
+}
+console.log(b('a'));
