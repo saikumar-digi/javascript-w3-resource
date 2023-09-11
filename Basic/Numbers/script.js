@@ -290,4 +290,83 @@ console.log(test8(56, 3));
 console.log(test8(54, 82));
 console.log(test8(19, 28));
 
+//41 Write a JavaScript program to check a set of three numbers; if the three numbers are the same return 30; otherwise return 20; and if two numbers are the same return 40.
+
+function test9(x, y, z) {
+  if (x == y && y == z) {
+    return 30;
+  }
+
+  if (x == y || y == z || z == x) {
+    return 40;
+  }
+
+  return 20;
+}
+console.log(test9(4, 4, 4));
+console.log(test9(12, 43, 19));
+
+//42 Write a JavaScript program to check whether three given numbers are increasing in strict or in soft mode.
+//Note: Strict mode -> 10, 15, 31 : Soft mode -> 24, 22, 31 or 22, 22, 31
+
+
+function test10(x, y, z ) {
+  if ( y > x && z > y) 
+  {
+    return "strict mode";    
+  }
+  else if(z > y) 
+   return "Soft mode";
+  else
+    return "Undefinded";
+}
+
+console.log(test10(50,19,81));
+
+
+//43 Write a JavaScript program to check from three given numbers (non negative integers) that two or all of them have the same rightmost digit.
+function test11(p, q, r) {
+  return (p % 10 === q % 10) ||
+         (p % 10 === r % 10) ||
+         (q % 10 === r % 10);
+         
+}
+
+console.log(test11(21,62,92));
+console.log(test11(12,402,4));
+
+//45 Write a JavaScript program that checks two integer values and returns true if either one is 15 or if their sum or difference is 15.
+function test12(x, y) {
+  return (x === 15 || y === 15 || x + y === 15 || Math.abs(x - y) === 15);
+}
+
+console.log(test12(19, 7));
+console.log(test12(9, 5));
+console.log(test12(25, 4));
+
+//46 Write a JavaScript program to check two given non-negative integers if one (not both) is a multiple of 7 or 11.
+function test13 (a, b) {
+  if (!((a % 7 == 0 || a % 11 == 0) && (b % 7 == 0 || b % 11 == 0))) {
+  return ((a % 7 == 0 || a % 11 == 0) || (b % 7 == 0 || b % 11 == 0));
+  }
+  else
+  return false;
+  }
+  console.log(test13(56, 19));
+  console.log(test13(23, 24));
+
+  //47 Write a JavaScript program to check whether a given number exists in the range 40..10000.
+  //For example 40 presents in 40 and 4000.
+  function test14(x, y, n) 
+  {    
+    if (n < 40 || n > 10000)
+      return false;
+    else
+      if (n >= x && n <= y)
+        return true;
+      else
+        return false;
+  }
+console.log(test14(4, 3000, 35));  
+console.log(test14(80, 420, 97));  
 

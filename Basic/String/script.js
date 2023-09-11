@@ -1,14 +1,13 @@
 // Create a new string adding "Py" in front of a given string
-function string(str1) {
-  if (str1 === null || str1 === undefined || str1.substring(0, 2) === 'Py') 
-  {
-    return str1;
+function addString(str) {
+  if (str === undefined || str === null || str.substring(0,2) == 'Py') {
+    return str;
   }
-  return "Py"+str1;
+     return "Py"+str;
 }
 
-console.log(string("Python"));
-console.log(string("thon"));
+console.log(addString("Python"));
+console.log(addString("thon"));
 
 //Remove a character at the specified position of a given string and return the new string
 function removeCharacter(str, char) 
@@ -105,3 +104,56 @@ function upperLower(str) {
 console.log(upperLower("SaiKUmar"));
 console.log(upperLower("ABU"));
 console.log(upperLower("VIvekaN"));
+
+//48 Write a JavaScript program to reverse a given string.
+function reverseString(str) 
+{
+    return str.split("").reverse().join("");
+}
+
+console.log(reverseString("saikumar"));
+console.log(reverseString("aaaa"));
+console.log(reverseString("ashishMaity"));
+
+//49 Write a JavaScript program to replace every character in a given string with the character following it in the alphabet.
+function replaceString(text) {
+    let a = text.split('');
+    for (let i = 0; i < a.length; i++) {
+        switch(a[i]) {
+          case ' ':
+            break;
+          case 'z':
+            a[i] = 'a';
+            break;
+          case 'Z':     
+            a[i] = 'A';
+            break;
+          default:
+            a[i] = String.fromCharCode(1 + a[i].charCodeAt(0));
+        }
+
+        // Upper-case vowels
+        switch(a[i]) {
+          case 'a': case 'e': case 'i': case 'o': case 'u':
+            a[i] = a[i].toUpperCase();
+        }
+    }
+    return a.join('');
+}
+console.log(replaceString("saikumar"));
+console.log(replaceString("abu"));
+console.log(replaceString("VivekAnanDa"));
+
+//50  Write a JavaScript program to capitalize the first letter of each word in a given string.
+function capLetter(str) 
+{
+    str = str.split(" ");
+
+    for (let i = 0, x = str.length; i < x; i++) {
+        str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+    }
+
+    return str.join(" ");
+}
+
+console.log(capLetter("Hii good morning team happy to have you Guys."));
