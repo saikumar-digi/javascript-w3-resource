@@ -162,7 +162,6 @@ function capLetter(str)
 console.log(capLetter("Hii good morning team happy to have you Guys."));
 
 //Write a JavaScript program to create a new string from a given string by changing the position of the first and last characters. The string length must be broader than or equal to 1.
-
 function b(str1) 
   {
   if (str1.length <= 1)
@@ -173,3 +172,44 @@ function b(str1)
   return (str1.charAt(str1.length - 1)) + a + str1.charAt(0);
 }
 console.log(b('a'));
+
+// 52 Write a JavaScript program to convert letters of a given string alphabetically.
+function test52(str) { 
+  return str.split("").sort().join("");      
+}
+console.log(test52("saikumar"));
+console.log(test52("Vivekanda"));
+
+// 53 Write a JavaScript program to check whether the characters a and b are separated by exactly 3 places anywhere (at least once) in a given string.
+function test53(str)
+ {
+    return (/a...b/).test(str) || (/b...a/).test(str);
+ }
+console.log(test53("abcgdfhj"));
+console.log(test53("panmasla"));
+console.log(test53("abcahgfb")); 
+
+
+//54Write a JavaScript program to count the number of vowels in a given string.
+function vowelCount(str){
+  let abc = []
+  for (let i = 0; i < str.length; i++) {
+    if (str[i]=="a" || str[i]=="e" || str[i] == "i" || str[i] == "o" || str[i] == "u") {
+     abc.push(str[i])
+    }
+  }
+   console.log( abc.length)
+
+}
+vowelCount("saikumar")
+vowelCount("vivekanda")
+
+//or
+
+function vowelCount(str)
+{ 
+  return str.replace(/[^aeiou]/g, "").length; 
+}
+
+console.log(vowelCount("saikumar"));
+console.log(vowelCount("vivekanda"));
